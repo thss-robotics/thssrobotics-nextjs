@@ -22,8 +22,9 @@ main {
 code {
   background: #fafafa;
   border-radius: 5px;
-  padding: 0.75rem;
+  padding: 1rem;
   font-family: Menlo, Monaco, Lucida Console, Courier New, monospace;
+  color:red;
 }
 
 .container {
@@ -32,4 +33,13 @@ code {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+#offset{
+  margin-top: 5rem;
+}
+
+p {
+  line-height: 3rem;
+  margin-bottom: -0.1rem;
 }
