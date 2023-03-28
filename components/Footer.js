@@ -1,11 +1,11 @@
 import React from 'react';
-import { Container, Typography } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 
 const Footer = () => {
   return (
-    <Container
+    <Box
       sx={{
-        backgroundColor: '#f5f5f5',
+        backgroundColor: '#808080',
         padding: '1rem 0',
         marginTop: 'auto',
         width: '100%',
@@ -15,12 +15,13 @@ const Footer = () => {
         variant="body1"
         align="center"
         sx={{
-          color: 'text.secondary',
+          color: '#ffffff',
+          fontFamily: 'Anonymous Pro, sans-serif',
         }}
       >
         THSS Robotics Team © {new Date().getFullYear()}
       </Typography>
-    </Container>
+    </Box>
   );
 };
 

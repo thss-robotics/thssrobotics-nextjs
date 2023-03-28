@@ -12,11 +12,6 @@ body {
 
 main {
   padding: 5rem 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 code {
@@ -42,4 +37,8 @@ code {
 p {
   line-height: 3rem;
   margin-bottom: -0.1rem;
+}
+
+#about-us-text {
+  text-align: center;
 }

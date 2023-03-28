@@ -3,8 +3,6 @@ import Link from 'next/link';
 import { Typography, Box, Button, Container, Grid } from '@mui/material';
 
 import AboutUs from '../components/AboutUs';
-import TeamMembers from '../components/TeamMembers';
-import Projects from '../components/Projects';
 import Sponsors from '../components/Sponsors';
 
 const Home = () => {
@@ -22,7 +20,7 @@ const Home = () => {
   return (
     <div>
       <Container maxWidth="false" disableGutters>
-      <Grid container spacing={0} sx={{ height: 'calc(100vh - 64px)', minHeight: '600px' }}>
+      <Grid container spacing={0} sx={{ minHeight: '100vh' }}>
           <Grid item xs={12} md={8}>
             <Box
               sx={{
@@ -38,7 +36,7 @@ const Home = () => {
             <Box
               sx={{
                 height: { xs: '50%', md: '100%' },
-                minHeight: { xs: '300px', md: 'auto' },
+                minHeight: { xs: '500px', md: 'auto' },
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'center',
@@ -78,28 +76,29 @@ const Home = () => {
                   fontSize: '1rem'
                 }}
               >
-                <Link href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" passHref>
+                <Button
+                  variant="outlined"
+                  color="inherit"
+                  onClick={() => document.getElementById('about-us').scrollIntoView({ behavior: 'smooth' })}
+                  sx={{
+                    whiteSpace: 'nowrap',
+                    fontFamily: 'inherit',
+                    color: 'black',
+                    marginRight: '2rem',
+                    borderColor: 'black',
+                    fontSize: 'inherit',
+                    padding: '0.5rem 1.5rem',
+                    '&:hover': { backgroundColor: 'rgba(0, 0, 0, 0.1)' },
+                    
+                  }}
+                >
+                  About Us
+                </Button>
+                <Link href="mailto: thssrobotics@gmail.com?subject=Support for the THSS Robotics Team&body=My name is [Your Name] and I'm reaching out to express our interest in supporting your FRC robotics team.">
                   <Button
                     variant="outlined"
                     color="inherit"
-                    sx={{
-                      whiteSpace: 'nowrap',
-                      fontFamily: 'inherit',
-                      color: 'black',
-                      marginRight: '2rem',
-                      borderColor: 'black',
-                      fontSize: 'inherit',
-                      padding: '0.5rem 1.5rem',
-                      '&:hover': { backgroundColor: 'rgba(0, 0, 0, 0.1)' },
-                    }}
-                  >
-                    About Us
-                  </Button>
-                </Link>
-                <Link href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" passHref>
-                  <Button
-                    variant="outlined"
-                    color="inherit"
+                    ///onClick={() => document.getElementById('sponsors').scrollIntoView({ behavior: 'smooth' })}
                     sx={{
                       whiteSpace: 'nowrap',
                       color: 'black',
@@ -119,13 +118,12 @@ const Home = () => {
         </Grid>
       </Container>
 
+
       <AboutUs />
+ 
 
-      <TeamMembers />
-
-      <Projects />
-      
       <Sponsors />
+
     </div>
   );
 };
