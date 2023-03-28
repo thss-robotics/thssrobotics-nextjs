@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 const RecyclingProject = () => {
   return (
-    <Container maxWidth="md">
+    <Container maxWidth="md" >
       <Typography variant="h2" align="center" gutterBottom>
         Recycling Identification and Sorting Robot
       </Typography>
