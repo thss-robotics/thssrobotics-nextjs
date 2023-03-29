@@ -94,7 +94,7 @@ const Home = () => {
                 >
                   About Us
                 </Button>
-                <Link href="mailto: thssrobotics@gmail.com?subject=Support for the THSS Robotics Team&body=My name is [Your Name] and I'm reaching out to express our interest in supporting your FRC robotics team.">
+                <Link href="mailto:thssrobotics@gmail.com?subject=Support for the THSS Robotics Team&body=My name is [Your Name] and I'm reaching out to express our interest in supporting your FRC robotics team.">
                   <Button
                     variant="outlined"
                     color="inherit"

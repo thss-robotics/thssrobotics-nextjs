@@ -1,11 +1,16 @@
 import React from 'react';
-import { Typography, Box, Container, Grid } from '@mui/material';
+import { Typography, Box, Container, Grid, Link } from '@mui/material';
 
 const Sponsors = () => {
   const sponsorLogos = [
     'sponsor1.png',
     'sponsor2.jpg',
     'sponsor3.jpg',
+  ];
+  const sponsoURLs = [
+    'https://www.stryker.com',
+    'http://dear-forest.com/portfolio/knuh-beacon-map/',
+    'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
   ];
   return (
     <Box
@@ -43,8 +48,10 @@ const Sponsors = () => {
             <Grid container spacing={2} justifyContent="center">
               {sponsorLogos.map((logo, index) => (
                 <Grid item key={index} xs={6} sm={4} md={3}>
-                  <img src={logo} alt="Sponsor logo" style={{ maxWidth: '100%' }} />
-                </Grid>
+                  <Link href={sponsoURLs[index]}>
+                    <img src={logo} alt="Sponsor logo" style={{ maxWidth: '100%' }} />
+                  </Link>
+                </Grid> 
               ))}
             </Grid>
           </Grid>
