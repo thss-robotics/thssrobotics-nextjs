@@ -16,7 +16,7 @@ const Sponsors = () => {
     <Box
       id="sponsors"
       sx={{
-        backgroundColor: '#fffff',
+        backgroundColor: '#f5f5f5',
         minHeight: '300px',
         display: 'flex',
         justifyContent: 'center',

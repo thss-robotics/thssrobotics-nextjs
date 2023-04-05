@@ -4,6 +4,7 @@ import { Typography, Box, Button, Container, Grid } from '@mui/material';
 
 import AboutUs from '../components/AboutUs';
 import Sponsors from '../components/Sponsors';
+import Projects from '../components/Projects';
 
 const Home = () => {
   const [displayText, setDisplayText] = useState('WE ARE THSS ROBOTICS');
@@ -121,6 +122,7 @@ const Home = () => {
 
       <AboutUs />
  
+      <Projects />
 
       <Sponsors />
 

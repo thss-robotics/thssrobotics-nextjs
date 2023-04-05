@@ -1,5 +1,5 @@
 import React from 'react';
-import { AppBar, Toolbar, Typography } from '@mui/material';
+import { AppBar, Toolbar, Typography, Link } from '@mui/material';
 
 const Header = ({ sx }) => {
   return (
@@ -11,21 +11,23 @@ const Header = ({ sx }) => {
         backgroundPosition: 'center',
       }}
     >
-      <Toolbar>
-        <Typography
-          variant="h6"
-          sx={{
-            color: 'white',
-            flexGrow: 1,
-            fontFamily: 'Orbitron, sans-serif',
-            textAlign: 'center',
-            fontSize: '3vh',
-            fontStyle: 'italic',
-          }}
-        >
-          THSS Robotics Team
-        </Typography>
-      </Toolbar>
+      <Link href="https://thssrobotics.com">
+        <Toolbar>
+            <Typography
+              variant="h6"
+              sx={{
+                color: 'white',
+                flexGrow: 1,
+                fontFamily: 'Orbitron, sans-serif',
+                textAlign: 'center',
+                fontSize: '3vh',
+                fontStyle: 'italic',
+              }}
+            >
+              THSS Robotics Team
+            </Typography>
+        </Toolbar>
+      </Link>
     </AppBar>
   );
 };
