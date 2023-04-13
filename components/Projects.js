@@ -18,7 +18,12 @@ const Projects = () => {
       image: '/images/frc_2024_practice_robot.png',
       projectId: 'frc-2024-practice-robot'
     },
-    // Add more projects here
+    {
+      title: 'BuzzBot',
+      description: "We're not quite sure what this is.",
+      image: '/images/buzzbot.jpg',
+      projectId: 'buzzbot'
+    },
   ];
   
 
