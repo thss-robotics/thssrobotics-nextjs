@@ -27,7 +27,7 @@ const Home = () => {
               sx={{
                 height: { xs: '50%', md: '100%' },
                 minHeight: { xs: '400px', md: 'auto' },
-                backgroundImage: 'url(/team-photo.jpg)',
+                backgroundImage: 'url(/team-photo.png)',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
               }}
