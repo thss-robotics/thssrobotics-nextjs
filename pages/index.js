@@ -7,12 +7,12 @@ import Sponsors from '../components/Sponsors';
 import Projects from '../components/Projects';
 
 const Home = () => {
-  const [displayText, setDisplayText] = useState('WE ARE THSS ROBOTICS');
+  const [displayText, setDisplayText] = useState('WE ARE THUNDERTECH ROBOTICS');
 
   useEffect(() => {
     const interval = setInterval(() => {
       setDisplayText((prevText) =>
-        prevText === 'WE ARE THSS ROBOTICS' ? 'WE ARE THE BEST' : 'WE ARE THSS ROBOTICS'
+        prevText === 'WE ARE THUNDERTECH ROBOTICS' ? 'WE ARE THE BEST' : 'WE ARE THUNDERTECH ROBOTICS'
       );
     }, 5000);
     return () => clearInterval(interval);
@@ -66,7 +66,7 @@ const Home = () => {
                   marginBottom: '2rem',
                 }}
               >
-                THSS Robotics Team is dedicated to building innovative robots while fostering
+                We are dedicated to building innovative robots while fostering
                 teamwork, creativity, and learning. Join us on our journey to change the world,
                 one robot at a time!
               </Typography>

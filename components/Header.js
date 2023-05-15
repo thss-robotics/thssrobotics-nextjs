@@ -24,7 +24,7 @@ const Header = ({ sx }) => {
                 fontStyle: 'italic',
               }}
             >
-              THSS Robotics Team
+              ThunderTech Robotics
             </Typography>
         </Toolbar>
       </Link>

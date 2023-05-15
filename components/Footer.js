@@ -19,7 +19,7 @@ const Footer = () => {
           fontFamily: 'Anonymous Pro, sans-serif',
         }}
       >
-        THSS Robotics Team © {new Date().getFullYear()}
+        ThunderTech Robotics Team © {new Date().getFullYear()}
       </Typography>
     </Box>
   );
