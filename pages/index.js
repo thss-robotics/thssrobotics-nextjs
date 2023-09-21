@@ -12,7 +12,7 @@ const Home = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setDisplayText((prevText) =>
-        prevText === 'WE ARE THUNDERTECH ROBOTICS' ? 'WE ARE THE BEST' : 'WE ARE THUNDERTECH ROBOTICS'
+        prevText === 'WE ARE THUNDERTECH ROBOTICS' ? 'JOIN US' : 'WE ARE THUNDERTECH ROBOTICS'
       );
     }, 5000);
     return () => clearInterval(interval);
@@ -27,7 +27,7 @@ const Home = () => {
               sx={{
                 height: { xs: '50%', md: '100%' },
                 minHeight: { xs: '400px', md: 'auto' },
-                backgroundImage: 'url(/team-photo.png)',
+                backgroundImage: 'url('/* /team-photo.png*/ +'https://i.postimg.cc/YqmTQRG5/team-photo.png)',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
               }}
@@ -90,7 +90,7 @@ const Home = () => {
                     fontSize: 'inherit',
                     padding: '0.5rem 1.5rem',
                     '&:hover': { backgroundColor: 'rgba(0, 0, 0, 0.1)' },
-                    
+
                   }}
                 >
                   About Us
@@ -121,7 +121,7 @@ const Home = () => {
 
 
       <AboutUs />
- 
+
       <Projects />
 
       <Sponsors />

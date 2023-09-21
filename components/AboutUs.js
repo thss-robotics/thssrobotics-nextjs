@@ -43,9 +43,8 @@ const AboutUs = () => {
                 maxWidth: '80vw',
               }}
             >
-              We are a robotics team at Thomas Haney Secondary School <br />
-              We started out this year in 2023 and aim to compete in FRC 2024. We are working on
-              small projects to learn teamwork and technical skills this year.
+              As a newly formed robotics team at Thomas Haney Secondary School, we embarked on our journey in 2023 with an ambition to participate in FRC 2024.
+              Our primary goal is to hone our teamwork and technical skills through projects that benefit our community.
             </Typography>
           </Grid>
         </Grid>

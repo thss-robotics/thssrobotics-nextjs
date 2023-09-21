@@ -1,35 +1,31 @@
 import React from 'react';
-import { AppBar, Toolbar, Typography, Link } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 
-const Header = ({ sx }) => {
-  return (
-    <AppBar
-      position="static"
-      sx={{
-        //backgroundImage: 'url(/header-background.jpg)',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-      }}
-    >
-      <Link href="https://thssrobotics.com">
-        <Toolbar>
+const Header = ({ height = '42px' }) => {
+    return (
+        <Box
+            sx={{
+                height: height,
+                backgroundColor: '#3f51b5', // Default AppBar color; adjust if needed
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+            }}
+        >
             <Typography
-              variant="h6"
-              sx={{
-                color: 'white',
-                flexGrow: 1,
-                fontFamily: 'Orbitron, sans-serif',
-                textAlign: 'center',
-                fontSize: '3vh',
-                fontStyle: 'italic',
-              }}
+                variant="h6"
+                sx={{
+                    color: 'white',
+                    fontFamily: 'Orbitron, sans-serif',
+                    fontSize: '3vh',
+                    fontStyle: 'italic',
+                    lineHeight: height,  // To ensure the text is vertically centered
+                }}
             >
-              ThunderTech Robotics
+                ThunderTech Robotics
             </Typography>
-        </Toolbar>
-      </Link>
-    </AppBar>
-  );
+        </Box>
+    );
 };
 
 export default Header;
