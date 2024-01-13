@@ -17,7 +17,7 @@ const Sponsors = () => {
       id="sponsors"
       sx={{
         backgroundColor: '#f5f5f5',
-        minHeight: '300px',
+        minHeight: '500px',
         display: 'flex',
         justifyContent: 'center',
         paddingTop: '1rem',
@@ -41,19 +41,20 @@ const Sponsors = () => {
                 fontWeight: 'bold',
               }}
             >
-              Sponsors
+              Sponsor Us
             </Typography>
           </Grid>
           <Grid item>
-            <Grid container spacing={2} justifyContent="center">
-              {sponsorLogos.map((logo, index) => (
-                <Grid item key={index} xs={6} sm={4} md={3}>
-                  <Link href={sponsoURLs[index]}>
-                    <img src={logo} alt="Sponsor logo" style={{ maxWidth: '100%' }} />
-                  </Link>
-                </Grid> 
-              ))}
-            </Grid>
+            <Typography
+              variant="h5"
+              sx={{
+                marginBottom: '1rem',
+                fontFamily: 'Anonymous Pro, sans-serif',
+                maxWidth: '80vw',
+              }}
+            >
+              In our endeavor, your support is invaluable. We are incredibly grateful for any form of contribution – whether it be monetary donations, tools, materials, or even expert advice. Join us in our mission to build, learn, and grow as we strive to leave a mark in the realm of robotics.
+            </Typography>
           </Grid>
         </Grid>
       </Container>

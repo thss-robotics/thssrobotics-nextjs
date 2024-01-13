@@ -21,7 +21,7 @@ const Home = () => {
   return (
     <div>
       <Container maxWidth="false" disableGutters>
-      <Grid container spacing={0} sx={{ minHeight: '100vh' }}>
+      <Grid container spacing={0} sx={{   height: { xs: 'calc(50vh)', md: 'calc(100vh)' },minHeight: { xs: '400px', md: 'auto' }, }}>
           <Grid item xs={12} md={8}>
             <Box
               sx={{
@@ -36,6 +36,7 @@ const Home = () => {
           <Grid item xs={12} md={4}>
             <Box
               sx={{
+                position: 'relative', // Needed for absolute positioning of pseudo-element
                 height: { xs: '50%', md: '100%' },
                 minHeight: { xs: '500px', md: 'auto' },
                 display: 'flex',
@@ -43,6 +44,16 @@ const Home = () => {
                 justifyContent: 'center',
                 backgroundColor: 'white',
                 padding: '2rem',
+                '::before': { // Pseudo-element for the fade effect
+                  content: '""',
+                  position: 'absolute',
+                  left: '-300px', // Start the fade effect 100px to the left
+                  top: 0,
+                  bottom: 0,
+                  width: '300px', // Width of the fade effect
+                  background: 'linear-gradient(to right, rgba(255, 255, 255, 0), white 100%)',
+                  zIndex: 1, // Above the image, below the text
+                },
               }}
             >
               <Typography

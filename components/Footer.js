@@ -1,26 +1,74 @@
 import React from 'react';
-import { Box, Typography } from '@mui/material';
+import { Box, Typography, Grid } from '@mui/material';
+import YouTubeIcon from '@mui/icons-material/YouTube';
+import InstagramIcon from '@mui/icons-material/Instagram';
 
 const Footer = () => {
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Century+Gothic');
+  </style>
+
   return (
     <Box
       sx={{
-        backgroundColor: '#808080',
-        padding: '1rem 0',
+        backgroundColor: '#9435cc', // Updated to light purple background
+        padding: '1rem',
         marginTop: 'auto',
         width: '100%',
+        height: '300px', // Set the height to 500px
+        display: 'flex',
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        fontFamily: '"Century Gothic", sans-serif',
       }}
     >
-      <Typography
-        variant="body1"
-        align="center"
-        sx={{
-          color: '#ffffff',
-          fontFamily: 'Anonymous Pro, sans-serif',
-        }}
-      >
-        ThunderTech Robotics Team © {new Date().getFullYear()}
-      </Typography>
+      <Box sx={{ marginLeft: '15%' }}> {/* Left-aligned content with 15% margin */}
+        <Typography
+          variant="h5"
+          mb={3}
+          
+          sx={{
+            fontWeight: 'bold',
+            color: 'white',
+            fontFamily: '"Century Gothic", sans-serif',
+          }}
+          
+        >
+          Team 9719 ThunderTech Robotics
+        </Typography>
+        <Typography
+          variant="h6"
+          sx={{
+            color: 'white',
+            fontFamily: '"Century Gothic", sans-serif',
+          }}
+          
+        >
+          <b>Contact:</b><br />
+          Email: thssrobotics@gmail.com<br />
+          Phone: (778) 697-2907
+        </Typography>
+      </Box>
+
+      <Box sx={{ marginRight: '15%' }}> {/* Right-aligned content with 15% margin */}
+        <Typography
+          variant="h5"
+          mt={-7}
+          sx={{
+            fontWeight: 'bold',
+            color: 'white',
+            textAlign: 'right',
+            fontFamily: '"Century Gothic", sans-serif',
+          }}
+        >
+          This website was made by students.
+        </Typography>
+        <Box sx={{ display: 'flex', justifyContent: 'flex-end', marginTop: '1rem' }}>
+          <YouTubeIcon sx={{ color: 'white', marginRight: '0.5rem', fontSize: '3rem' }} /> {/* 5x larger icons */}
+          <InstagramIcon sx={{ color: 'white', fontSize: '3rem' }} />
+        </Box>
+      </Box>
     </Box>
   );
 };
