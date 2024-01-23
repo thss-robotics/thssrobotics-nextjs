@@ -10,6 +10,8 @@ class MyDocument extends Document {
           <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet" />
           <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet" /> 
           <link href="https://fonts.googleapis.com/css2?family=Century+Gothic" rel="stylesheet"/>
+          <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/>
+
 
 
           {/* Google Analytics */}

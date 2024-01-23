@@ -20,14 +20,14 @@ const Home = () => {
 
   return (
     <div>
-      <Container maxWidth="false" disableGutters>
+      {/*<Container maxWidth="false" disableGutters>
       <Grid container spacing={0} sx={{   height: { xs: 'calc(50vh)', md: 'calc(100vh)' },minHeight: { xs: '400px', md: 'auto' }, }}>
           <Grid item xs={12} md={8}>
             <Box
               sx={{
                 height: { xs: '50%', md: '100%' },
                 minHeight: { xs: '400px', md: 'auto' },
-                backgroundImage: 'url('/* /team-photo.png*/ +'https://i.postimg.cc/YqmTQRG5/team-photo.png)',
+                backgroundImage: 'url(' +'https://i.postimg.cc/YqmTQRG5/team-photo.png)',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
               }}
@@ -128,7 +128,9 @@ const Home = () => {
             </Box>
           </Grid>
         </Grid>
+        
       </Container>
+      */}
 
 
       <AboutUs />

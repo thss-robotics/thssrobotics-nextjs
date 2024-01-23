@@ -20,20 +20,18 @@ const Footer = () => {
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-between',
-        fontFamily: '"Century Gothic", sans-serif',
+        fontFamily: '"Exo 2", sans-serif', 
       }}
     >
       <Box sx={{ marginLeft: '15%' }}> {/* Left-aligned content with 15% margin */}
         <Typography
           variant="h5"
           mb={3}
-          
           sx={{
             fontWeight: 'bold',
             color: 'white',
-            fontFamily: '"Century Gothic", sans-serif',
+            fontFamily: '"Exo 2", sans-serif', 
           }}
-          
         >
           Team 9719 ThunderTech Robotics
         </Typography>
@@ -41,25 +39,34 @@ const Footer = () => {
           variant="h6"
           sx={{
             color: 'white',
-            fontFamily: '"Century Gothic", sans-serif',
+            fontFamily: '"Exo 2", sans-serif',
+            fontWeight: 'bold', 
           }}
-          
         >
-          <b>Contact:</b><br />
+          Contact:
+        </Typography>
+        <Typography
+          variant="h6"
+          sx={{
+            color: 'white',
+            fontFamily: '"Exo 2", sans-serif'
+          }}
+        >
           Email: thssrobotics@gmail.com<br />
           Phone: (778) 697-2907
         </Typography>
       </Box>
+
 
       <Box sx={{ marginRight: '15%' }}> {/* Right-aligned content with 15% margin */}
         <Typography
           variant="h5"
           mt={-7}
           sx={{
-            fontWeight: 'bold',
+            fontWeight: 'medium',
             color: 'white',
             textAlign: 'right',
-            fontFamily: '"Century Gothic", sans-serif',
+            fontFamily: '"Exo 2", sans-serif',  
           }}
         >
           This website was made by students.

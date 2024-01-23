@@ -3,15 +3,12 @@ import { Typography, Box, Container, Grid, Link } from '@mui/material';
 
 const Sponsors = () => {
   const sponsorLogos = [
-    'sponsor1.png',
-    'sponsor2.jpg',
-    'sponsor3.jpg',
+    'McFarlen Engineering.png',
   ];
-  const sponsoURLs = [
-    'https://www.stryker.com',
-    'http://dear-forest.com/portfolio/knuh-beacon-map/',
+  const sponsorURLs = [
     'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
   ];
+
   return (
     <Box
       id="sponsors"
@@ -20,7 +17,7 @@ const Sponsors = () => {
         minHeight: '500px',
         display: 'flex',
         justifyContent: 'center',
-        paddingTop: '1rem',
+        paddingTop: '3rem',
       }}
     >
       <Container maxWidth="md">
@@ -37,11 +34,24 @@ const Sponsors = () => {
               variant="h3"
               sx={{
                 marginBottom: '1rem',
-                fontFamily: 'Orbitron, sans-serif',
+                fontFamily: '"Exo 2", sans-serif', 
                 fontWeight: 'bold',
               }}
             >
-              Sponsor Us
+              Our Sponsors
+            </Typography>
+          </Grid>
+          <Grid item>
+            <Typography
+              variant="h5"
+              sx={{
+                marginBottom: '3rem',
+                fontFamily: '"Exo 2", sans-serif', 
+                maxWidth: '80vw',
+               
+              }}
+            >
+              In our endeavor, your support is invaluable. We are incredibly grateful for any form of contribution – whether it be monetary donations, tools, materials, or even expert advice. Join us in our mission to build, learn, and grow as we strive to leave a mark in the realm of robotics.
             </Typography>
           </Grid>
           <Grid item>
@@ -49,12 +59,31 @@ const Sponsors = () => {
               variant="h5"
               sx={{
                 marginBottom: '1rem',
-                fontFamily: 'Anonymous Pro, sans-serif',
-                maxWidth: '80vw',
+                fontFamily: '"Exo 2", sans-serif', 
+                fontWeight: 'bold',
               }}
             >
-              In our endeavor, your support is invaluable. We are incredibly grateful for any form of contribution – whether it be monetary donations, tools, materials, or even expert advice. Join us in our mission to build, learn, and grow as we strive to leave a mark in the realm of robotics.
+              Heartfelt Thanks to All Our Supporters:
             </Typography>
+          </Grid>
+          {/* Sponsor Logos */}
+          <Grid item>
+            <Grid
+              container
+              direction="row"
+              justifyContent="center"
+              alignItems="center"
+              spacing={2}
+              paddingBottom="3rem"
+            >
+              {sponsorLogos.map((logo, index) => (
+                <Grid item key={logo}>
+                  <Link href={sponsorURLs[index]} target="_blank">
+                    <img src={logo} alt={`Sponsor ${index + 1}`} style={{ maxWidth: '300px', maxHeight: '300px' }} />
+                  </Link>
+                </Grid>
+              ))}
+            </Grid>
           </Grid>
         </Grid>
       </Container>
