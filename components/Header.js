@@ -42,7 +42,7 @@ const Header = () => {
             />
             {isMobile ? (
                 <IconButton
-                    sx={{ position: 'absolute', right: '10px' }}
+                    sx={{ color: 'white', position: 'absolute', right: '10px' }}
                     aria-label="menu"
                 >
                     <MenuIcon />
