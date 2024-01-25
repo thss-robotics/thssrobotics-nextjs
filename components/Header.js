@@ -1,53 +1,43 @@
 import React from 'react';
-import { Box } from '@mui/material';
+import { Box, Button } from '@mui/material';
 
 const Header = () => {
+
+    const scrollToSection = (sectionId) => {
+        const section = document.getElementById(sectionId);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     return (
         <Box
             sx={{
-                top: 10,
-                left: 0,
-                right: 0,
-                height: '100vh', // Full height of the screen
-                backgroundImage: 'url(https://i.postimg.cc/YqmTQRG5/team-photo.png)',
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                zIndex: 1000, // Adjusted to bring the header to the front
-                '::before': { // Add a pseudo-element for the purple filter
-                    content: '""',
-                    position: 'absolute',
-                    top: 0,
-                    left: 0,
-                    right: 0,
-                    bottom: 0,
-                    backgroundColor: 'rgba(148, 53, 204, 0.2)', // Purple with 10% opacity
-                    zIndex: -1, // Positioned behind the logo and text
-                },
+                position: 'absolute', // Changed from 'static' to 'absolute'
+                top: 0, // Align to the top of the screen
+                left: 0, // Align to the left of the screen
+                width: '100%', // Ensure it spans the full width
+                display: 'flex',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+                padding: '2rem 2.5rem',
+                backgroundColor: 'transparent',
+                boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
+                zIndex: 1100, // Ensure it's above other content
             }}
         >
             <img 
                 src={'logoblack.png'} 
                 alt="ThunderTech Robotics Logo"
                 style={{
-                    height: '20vh', // Adjust as needed
-                    position: 'absolute',
-                    top: '50%',
-                    left: '50%',
-                    transform: 'translate(-50%, -50%)',
-                    filter: 'invert(100%)', // Invert colors to make logo white
+                    height: '70px',
+                    filter: 'invert(100%)',
                 }}
             />
-            <Box
-                sx={{
-                    position: 'absolute',
-                    bottom: '20px',
-                    right: '20px',
-                    color: 'white',
-                    fontFamily: 'Exo 2, sans-serif',
-                    fontSize: '1.5rem',
-                }}
-            >
-                <p>Innovating the Future</p>
+            <Box>
+                <Button sx={{ margin: '0 1rem', color: 'white', fontFamily: '"Exo 2", sans-serif', fontSize: '1.2rem' }} onClick={() => scrollToSection('about-us')}>About Us</Button>
+                <Button sx={{ margin: '0 1rem', color: 'white', fontFamily: '"Exo 2", sans-serif', fontSize: '1.2rem' }} onClick={() => scrollToSection('projects')}>Projects</Button>
+                <Button sx={{ margin: '0 1rem', color: 'white', fontFamily: '"Exo 2", sans-serif', fontSize: '1.2rem' }} onClick={() => scrollToSection('sponsors')}>Sponsor Us</Button>
             </Box>
         </Box>
     );

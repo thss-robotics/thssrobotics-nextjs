@@ -25,7 +25,6 @@ const Projects = () => {
       projectId: 'buzzbot'
     },
   ];
-  
 
   const handleProjectClick = (projectId) => {
     router.push(`/projects/${projectId}`);
@@ -43,67 +42,55 @@ const Projects = () => {
         paddingBottom: '3rem',
       }}
     >
-      <Container maxWidth="md">
-        <Grid
-          container
-          direction="column"
-          justifyContent="center"
-          alignItems="center"
-          spacing={2}
-          sx={{ minHeight: '100%', textAlign: 'center' }}
+      <Container maxWidth="lg">
+        <Typography
+          variant="h3"
+          sx={{
+            marginBottom: '3rem',
+            fontFamily: 'Orbitron, sans-serif',
+            fontWeight: 'bold',
+            textAlign: 'center', 
+          }}
         >
-          <Grid item>
-            <Typography
-              variant="h3"
-              sx={{
-                marginBottom: '1rem',
-                fontFamily: 'Orbitron, sans-serif',
-                fontWeight: 'bold',
-              }}
-            >
-              Projects
-            </Typography>
+          Projects
+        </Typography>
+        <Grid container spacing={3}>
+        {projectList.map((project, index) => (
+          <Grid item xs={12} sm={6} md={4} key={index}>
+            <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
+              <CardActionArea onClick={() => handleProjectClick(project.projectId)}>
+                <CardMedia
+                  component="img"
+                  height="240" 
+                  image={project.image}
+                  alt={project.title}
+                />
+                <CardContent sx={{ flexGrow: 1, overflow: 'auto' }}> 
+                  <Typography
+                    gutterBottom
+                    variant="h5"
+                    component="div"
+                    sx={{
+                      fontFamily: 'Orbitron, sans-serif',
+                      fontWeight: 'bold',
+                    }}
+                  >
+                    {project.title}
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    color="text.secondary"
+                    sx={{
+                      fontFamily: 'Anonymous Pro, sans-serif',
+                    }}
+                  >
+                    {project.description}
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+            </Card>
           </Grid>
-          <Grid item>
-            <Grid container spacing={3} justifyContent="center">
-              {projectList.map((project, index) => (
-                <Grid item xs={12} sm={6} md={10} key={index}>
-                  <Card>
-                    <CardActionArea onClick={() => handleProjectClick(project.projectId)}>
-                      <CardMedia
-                        component="img"
-                        height="240"
-                        image={project.image}
-                        alt={project.title}
-                      />
-                      <CardContent>
-                        <Typography
-                          gutterBottom
-                          variant="h5"
-                          component="div"
-                          sx={{
-                            fontFamily: 'Orbitron, sans-serif',
-                            fontWeight: 'bold',
-                          }}
-                        >
-                          {project.title}
-                        </Typography>
-                        <Typography
-                          variant="body2"
-                          color="text.secondary"
-                          sx={{
-                            fontFamily: 'Anonymous Pro, sans-serif',
-                          }}
-                        >
-                          {project.description}
-                        </Typography>
-                      </CardContent>
-                    </CardActionArea>
-                  </Card>
-                </Grid>
-              ))}
-            </Grid>
-          </Grid>
+        ))}
         </Grid>
       </Container>
     </Box>
