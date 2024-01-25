@@ -36,6 +36,7 @@ const Header = () => {
                     filter: 'invert(100%)',
                     position: isMobile ? 'absolute' : 'initial', // Adjust based on screen size
                     left: isMobile ? '50%' : 'initial',
+                    top: isMobile ? '50%' : 'initial',
                     transform: isMobile ? 'translateX(-50%)' : 'none',
                 }}
             />
