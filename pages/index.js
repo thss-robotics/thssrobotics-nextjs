@@ -26,7 +26,7 @@ const Home = () => {
             left: 0,
             right: 0,
             bottom: 0,
-            backgroundColor: 'rgba(148, 53, 204, 0.4)', // Adjusted opacity
+            backgroundColor: 'rgba(136, 0, 255, 0.4)', // Adjusted opacity
             zIndex: -1,
           },
         }}
