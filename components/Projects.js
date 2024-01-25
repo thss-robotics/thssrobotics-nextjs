@@ -60,7 +60,7 @@ const Projects = () => {
             marginBottom: '3rem',
             fontFamily: '"Exo 2", sans-serif',
             fontWeight: 'bold',
-            textAlign: 'center', 
+            textAlign: 'left', 
           }}
         >
           Projects
