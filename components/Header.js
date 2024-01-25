@@ -1,44 +1,48 @@
 import React from 'react';
-import { Box, Button } from '@mui/material';
+import { Box, useMediaQuery, useTheme, IconButton, Button } from '@mui/material';
+import MenuIcon from '@mui/icons-material/Menu';
 
 const Header = () => {
-
-    const scrollToSection = (sectionId) => {
-        const section = document.getElementById(sectionId);
-        if (section) {
-            section.scrollIntoView({ behavior: 'smooth' });
-        }
-    };
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
     return (
         <Box
             sx={{
-                position: 'absolute', // Changed from 'static' to 'absolute'
-                top: 0, // Align to the top of the screen
-                left: 0, // Align to the left of the screen
-                width: '100%', // Ensure it spans the full width
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                right: 0,
                 display: 'flex',
-                justifyContent: 'space-between',
+                justifyContent: 'center',
                 alignItems: 'center',
-                padding: '2rem 2.5rem',
+                padding: '1rem',
                 backgroundColor: 'transparent',
-                boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
-                zIndex: 1100, // Ensure it's above other content
+                zIndex: 1100,
             }}
         >
             <img 
                 src={'logoblack.png'} 
                 alt="ThunderTech Robotics Logo"
                 style={{
-                    height: '70px',
+                    height: '100px',
                     filter: 'invert(100%)',
                 }}
             />
-            <Box>
-                <Button sx={{ margin: '0 1rem', color: 'white', fontFamily: '"Exo 2", sans-serif', fontSize: '1.2rem' }} onClick={() => scrollToSection('about-us')}>About Us</Button>
-                <Button sx={{ margin: '0 1rem', color: 'white', fontFamily: '"Exo 2", sans-serif', fontSize: '1.2rem' }} onClick={() => scrollToSection('projects')}>Projects</Button>
-                <Button sx={{ margin: '0 1rem', color: 'white', fontFamily: '"Exo 2", sans-serif', fontSize: '1.2rem' }} onClick={() => scrollToSection('sponsors')}>Sponsor Us</Button>
-            </Box>
+            {isMobile ? (
+                <IconButton
+                    sx={{ position: 'absolute', right: '10px' }}
+                    aria-label="menu"
+                >
+                    <MenuIcon />
+                </IconButton>
+            ) : (
+                <Box>
+                    <Button sx={{ margin: '0 1rem', color: 'white', fontFamily: '"Exo 2", sans-serif', fontSize: '1.5rem' }} onClick={() => scrollToSection('about-us')}>About Us</Button>
+                    <Button sx={{ margin: '0 1rem', color: 'white', fontFamily: '"Exo 2", sans-serif', fontSize: '1.5rem' }} onClick={() => scrollToSection('projects')}>Projects</Button>
+                    <Button sx={{ margin: '0 1rem', color: 'white', fontFamily: '"Exo 2", sans-serif', fontSize: '1.5rem' }} onClick={() => scrollToSection('sponsors')}>Sponsor Us</Button>
+                </Box>
+            )}
         </Box>
     );
 };

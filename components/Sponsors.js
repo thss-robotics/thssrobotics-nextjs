@@ -4,8 +4,12 @@ import { Typography, Box, Container, Grid, Link } from '@mui/material';
 const Sponsors = () => {
   const sponsorLogos = [
     'McFarlen Engineering.png',
+    'firstlogo.png',
+    'motorola.png',
   ];
   const sponsorURLs = [
+    'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+    'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
     'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
   ];
 
@@ -17,16 +21,16 @@ const Sponsors = () => {
         minHeight: '500px',
         display: 'flex',
         justifyContent: 'center',
-        paddingTop: '3rem',
+        padding: '6rem 0rem',
       }}
     >
-      <Container maxWidth="md">
+      <Container maxWidth="lg">
         <Grid
           container
           direction="column"
           justifyContent="center"
           alignItems="center"
-          spacing={2}
+          spacing={3}
           sx={{ minHeight: '100%', textAlign: 'center' }}
         >
           <Grid item>
@@ -73,8 +77,8 @@ const Sponsors = () => {
               direction="row"
               justifyContent="center"
               alignItems="center"
-              spacing={2}
-              paddingBottom="3rem"
+              spacing={6}
+             
             >
               {sponsorLogos.map((logo, index) => (
                 <Grid item key={logo}>

@@ -7,29 +7,41 @@ const Projects = () => {
 
   const projectList = [
     {
+      title: 'Topographic Holobox',
+      description: "A holographic sandbox for teaching topology.",
+      image: '/images/holobox.jpg',
+      projectId: 'holobox',
+      link: 'https://www.sd42.ca/district-highlight/secondary-students-augmented/'
+    },
+    {
       title: 'Claw for Humanity',
       description: 'A recycling robot designed to help with waste management and promote environmental sustainability.',
-      image: '/images/claw_for_humanity.jpg',
-      projectId: 'claw-for-humanity'
+      image: '/images/claw_for_humanity2.jpg',
+      projectId: 'CFH',
+      link: 'https://youtu.be/3zYi_7Qy-Lk'
     },
     {
-      title: 'FRC Practice Robot',
+      title: 'FRC 2024 Practice Bot',
       description: 'A practice robot built to hone our skills and prepare for the FRC 2024 competition.',
-      image: '/images/frc_2024_practice_robot.png',
-      projectId: 'frc-2024-practice-robot'
+      image: '/images/frc_2024_practice_robot.jpg',
+      projectId: 'frc-2024-practice-robot',
+      link: 'https://www.firstinspires.org/robotics/frc'
     },
-    {
+    
+  ];
+{/*
       title: 'BuzzBot',
       description: "We're not quite sure what this is.",
       image: '/images/buzzbot.jpg',
       projectId: 'buzzbot'
-    },
-  ];
-
-  const handleProjectClick = (projectId) => {
-    router.push(`/projects/${projectId}`);
+  */}
+  const handleProjectClick = (project) => {
+    if (project.link) {
+      window.open(project.link, '_blank');
+    } else {
+      router.push(`/projects/${project.projectId}`);
+    }
   };
-
   return (
     <Box
       id="projects"
@@ -38,8 +50,7 @@ const Projects = () => {
         minHeight: '400px',
         display: 'flex',
         justifyContent: 'center',
-        paddingTop: '3rem',
-        paddingBottom: '3rem',
+        padding: '6rem 1rem',
       }}
     >
       <Container maxWidth="lg">
@@ -47,18 +58,18 @@ const Projects = () => {
           variant="h3"
           sx={{
             marginBottom: '3rem',
-            fontFamily: 'Orbitron, sans-serif',
+            fontFamily: '"Exo 2", sans-serif',
             fontWeight: 'bold',
             textAlign: 'center', 
           }}
         >
           Projects
         </Typography>
-        <Grid container spacing={3}>
+        <Grid container spacing={5}>
         {projectList.map((project, index) => (
           <Grid item xs={12} sm={6} md={4} key={index}>
             <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
-              <CardActionArea onClick={() => handleProjectClick(project.projectId)}>
+              <CardActionArea onClick={() => handleProjectClick(project)}>
                 <CardMedia
                   component="img"
                   height="240" 
@@ -71,7 +82,7 @@ const Projects = () => {
                     variant="h5"
                     component="div"
                     sx={{
-                      fontFamily: 'Orbitron, sans-serif',
+                      fontFamily: '"Exo 2", sans-serif',
                       fontWeight: 'bold',
                     }}
                   >
@@ -81,7 +92,7 @@ const Projects = () => {
                     variant="body2"
                     color="text.secondary"
                     sx={{
-                      fontFamily: 'Anonymous Pro, sans-serif',
+                      fontFamily: '"Exo 2", sans-serif',
                     }}
                   >
                     {project.description}

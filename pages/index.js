@@ -6,8 +6,6 @@ import Sponsors from '../components/Sponsors';
 import Projects from '../components/Projects';
 
 const Home = () => {
-  // ... existing useState and useEffect
-
   return (
     <div>
       <Box
@@ -16,8 +14,8 @@ const Home = () => {
           top: 0,
           left: 0,
           right: 0,
-          height: '80vh',
-          backgroundImage: 'url(https://i.postimg.cc/YqmTQRG5/team-photo.png)',
+          height: '800px',
+          backgroundImage: 'url(https://i.postimg.cc/g0GHz2jZ/cover.jpg)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           zIndex: 1000,
@@ -41,15 +39,33 @@ const Home = () => {
             transform: 'translate(-50%, -50%)',
             textAlign: 'center',
             color: 'white',
+            
           }}
         >
-          <Typography variant="h2" sx={{ fontFamily: '"Exo 2", sans-serif', fontWeight: 'bold' }}>
-            Team 9719 - ThunderTech Robotics
+          <Typography 
+            variant="h2" 
+            sx={{ 
+              whiteSpace: 'nowrap', // Prevents the text from wrapping
+              overflow: 'hidden', // Hides overflowed text
+              textOverflow: 'ellipsis', // Adds an ellipsis to overflowed text
+              fontFamily: '"Exo 2", sans-serif', 
+              fontWeight: 'bold',
+              fontSize: { xs: '9vw', sm: '9vw', md: '7vw', lg: '4.5rem' ,}, 
+            }}
+          >
+            ThunderTech Robotics
           </Typography>
-          <Typography variant="h5" sx={{ fontFamily: '"Exo 2", sans-serif' }}>
+          <Typography 
+            variant="h5" 
+            sx={{ 
+              fontFamily: '"Exo 2", sans-serif',
+              fontSize: { xs: '5vw', sm: '3vw', md: '2.5vw', lg: '1.5rem' ,}, // Responsive font size
+            }}
+          >
             Empowering Innovation and Teamwork in Robotics Technology
           </Typography>
         </Box>
+
       </Box>
 
       <AboutUs />

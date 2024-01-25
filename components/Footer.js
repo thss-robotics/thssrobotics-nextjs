@@ -1,81 +1,98 @@
 import React from 'react';
-import { Box, Typography, Grid } from '@mui/material';
+import { Box, Typography, Grid, Link } from '@mui/material';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import InstagramIcon from '@mui/icons-material/Instagram';
 
 const Footer = () => {
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Century+Gothic');
-  </style>
-
   return (
     <Box
       sx={{
-        backgroundColor: '#9435cc', // Updated to light purple background
-        padding: '1rem',
+        backgroundColor: '#9435cc',
         marginTop: 'auto',
         width: '100%',
-        height: '300px', // Set the height to 500px
-        display: 'flex',
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        fontFamily: '"Exo 2", sans-serif', 
+        fontFamily: '"Exo 2", sans-serif',
       }}
     >
-      <Box sx={{ marginLeft: '15%' }}> {/* Left-aligned content with 15% margin */}
-        <Typography
-          variant="h5"
-          mb={3}
-          sx={{
-            fontWeight: 'bold',
-            color: 'white',
-            fontFamily: '"Exo 2", sans-serif', 
-          }}
-        >
-          Team 9719 ThunderTech Robotics
-        </Typography>
-        <Typography
-          variant="h6"
-          sx={{
-            color: 'white',
-            fontFamily: '"Exo 2", sans-serif',
-            fontWeight: 'bold', 
-          }}
-        >
-          Contact:
-        </Typography>
-        <Typography
-          variant="h6"
-          sx={{
-            color: 'white',
-            fontFamily: '"Exo 2", sans-serif'
-          }}
-        >
-          Email: thssrobotics@gmail.com<br />
-          Phone: (778) 697-2907
-        </Typography>
-      </Box>
+      <Grid container sx={{ justifyContent: 'space-between', alignItems: 'center', height: { xs: '400px', md: '300px' }}}>
+        
+        {/* Left-aligned content */}
+        <Grid item xs={12} md={6} sx={{ paddingLeft: { xs: '0%', md: '15%' }, textAlign: { xs: 'center', md: 'left' }}}>
+          <Typography
+            variant="h5"
+            mb={3}
+            sx={{
+              fontWeight: 'bold',
+              color: 'white',
+              fontFamily: '"Exo 2", sans-serif',
+            }}
+          >
+            Team 9719 ThunderTech Robotics
+          </Typography>
+          <Typography
+            variant="h6"
+            sx={{
+              color: 'white',
+              fontFamily: '"Exo 2", sans-serif',
+              fontWeight: 'bold',
+            }}
+          >
+            Contact:
+          </Typography>
+          <Typography
+            variant="h6"
+            sx={{
+              color: 'white',
+              fontFamily: '"Exo 2", sans-serif'
+            }}
+          >
+            Email: 
+            <Link href="mailto:thssrobotics@gmail.com" sx={{ color: 'white', marginLeft: '0.5rem' }}>
+              thssrobotics@gmail.com
+            </Link>
+            <br />
+            Phone: 
+            <Link href="tel:+17786972907" sx={{ color: 'white', marginLeft: '0.5rem' }}>
+              (778) 697-2907
+            </Link>
+          </Typography>
+        </Grid>
 
 
-      <Box sx={{ marginRight: '15%' }}> {/* Right-aligned content with 15% margin */}
-        <Typography
-          variant="h5"
-          mt={-7}
-          sx={{
-            fontWeight: 'medium',
-            color: 'white',
-            textAlign: 'right',
-            fontFamily: '"Exo 2", sans-serif',  
-          }}
-        >
-          This website was made by students.
-        </Typography>
-        <Box sx={{ display: 'flex', justifyContent: 'flex-end', marginTop: '1rem' }}>
-          <YouTubeIcon sx={{ color: 'white', marginRight: '0.5rem', fontSize: '3rem' }} /> {/* 5x larger icons */}
-          <InstagramIcon sx={{ color: 'white', fontSize: '3rem' }} />
-        </Box>
-      </Box>
+        <Grid item xs={12} md={6} sx={{ paddingRight: { xs: '0%', md: '15%' }, textAlign: { xs: 'center', md: 'right' }, marginTop: '5rem' }}>
+          <Typography
+            variant="h5"
+            mt={-12}
+            sx={{
+              fontWeight: 'medium',
+              color: 'white',
+              fontFamily: '"Exo 2", sans-serif',
+            }}
+          >
+            This website was made by students.
+          </Typography>
+          <Typography
+            variant="body1"
+            sx={{
+              color: 'white',
+              fontFamily: '"Exo 2", sans-serif',
+            }}
+          >
+            Inspired by 
+            <Link href="https://www.team2706.ca/" target="_blank" rel="noopener noreferrer" sx={{ color: 'white', marginLeft: '0.5rem' }}>
+              Merge Robotics
+            </Link>.
+          </Typography>
+          <Box sx={{ display: 'flex', justifyContent: { xs: 'center', md: 'flex-end' }, marginTop: '2rem' }}>
+            <Link href="https://www.youtube.com/@thundertechrobotics" target="_blank" rel="noopener noreferrer">
+              <YouTubeIcon sx={{ color: 'white', marginRight: '0.5rem', fontSize: '3rem' }} />
+            </Link>
+            <Link href="https://www.instagram.com/thssrobotics/" target="_blank" rel="noopener noreferrer">
+              <InstagramIcon sx={{ color: 'white', fontSize: '3rem' }} />
+            </Link>
+          </Box>
+        </Grid>
+
+      </Grid>
     </Box>
   );
 };
