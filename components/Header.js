@@ -6,15 +6,22 @@ const Header = () => {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
+    const scrollToSection = (sectionId) => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     return (
         <Box
             sx={{
                 position: 'absolute',
-                top: 0,
-                left: 0,
-                right: 0,
+                top: 10,
+                left: 10,
+                right: 10,
                 display: 'flex',
-                justifyContent: 'center',
+                justifyContent: isMobile ? 'center' : 'space-between', // Adjust based on screen size
                 alignItems: 'center',
                 padding: '1rem',
                 backgroundColor: 'transparent',
@@ -27,6 +34,9 @@ const Header = () => {
                 style={{
                     height: '100px',
                     filter: 'invert(100%)',
+                    position: isMobile ? 'absolute' : 'initial', // Adjust based on screen size
+                    left: isMobile ? '50%' : 'initial',
+                    transform: isMobile ? 'translateX(-50%)' : 'none',
                 }}
             />
             {isMobile ? (
@@ -37,10 +47,10 @@ const Header = () => {
                     <MenuIcon />
                 </IconButton>
             ) : (
-                <Box>
-                    <Button sx={{ margin: '0 1rem', color: 'white', fontFamily: '"Exo 2", sans-serif', fontSize: '1.5rem' }} onClick={() => scrollToSection('about-us')}>About Us</Button>
-                    <Button sx={{ margin: '0 1rem', color: 'white', fontFamily: '"Exo 2", sans-serif', fontSize: '1.5rem' }} onClick={() => scrollToSection('projects')}>Projects</Button>
-                    <Button sx={{ margin: '0 1rem', color: 'white', fontFamily: '"Exo 2", sans-serif', fontSize: '1.5rem' }} onClick={() => scrollToSection('sponsors')}>Sponsor Us</Button>
+                <Box sx={{ display: 'flex' }}>
+                    <Button sx={{ margin: '0 1rem', color: 'white', fontFamily: '"Exo 2", sans-serif', fontSize: '1.2rem' }} onClick={() => scrollToSection('about-us')}>About Us</Button>
+                    <Button sx={{ margin: '0 1rem', color: 'white', fontFamily: '"Exo 2", sans-serif', fontSize: '1.2rem' }} onClick={() => scrollToSection('projects')}>Projects</Button>
+                    <Button sx={{ margin: '0 1rem', color: 'white', fontFamily: '"Exo 2", sans-serif', fontSize: '1.2rem' }} onClick={() => scrollToSection('sponsors')}>Sponsor Us</Button>
                 </Box>
             )}
         </Box>
