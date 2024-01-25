@@ -41,12 +41,12 @@ const Header = () => {
                 }}
             />
             {isMobile ? (
-                {/*<IconButton
+                <IconButton
                     sx={{ color: 'white', position: 'absolute', right: '10px' }}
                     aria-label="menu"
                 >
                     <MenuIcon />
-            </IconButton>*/}
+            </IconButton>
             ) : (
                 <Box sx={{ display: 'flex' }}>
                     <Button sx={{ margin: '0 1rem', color: 'white', fontFamily: '"Exo 2", sans-serif', fontSize: '1.2rem' }} onClick={() => scrollToSection('about-us')}>About Us</Button>
