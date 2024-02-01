@@ -8,9 +8,9 @@ const Sponsors = () => {
     'motorola.png',
   ];
   const sponsorURLs = [
-    'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
-    'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
-    'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+    'https://recaust.com/',
+    'https://www.firstinspires.org/',
+    'https://www.motorola.ca/',
   ];
 
   return (
