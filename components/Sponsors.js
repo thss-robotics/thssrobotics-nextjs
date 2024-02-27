@@ -6,11 +6,13 @@ const Sponsors = () => {
     'McFarlen Engineering.png',
     'firstlogo.png',
     'motorola.png',
+    'OuterLimitsLOGO.png',
   ];
   const sponsorURLs = [
     'https://recaust.com/',
     'https://www.firstinspires.org/',
     'https://www.motorola.ca/',
+    'https://outerlimitsclothing.ca/',
   ];
 
   return (
