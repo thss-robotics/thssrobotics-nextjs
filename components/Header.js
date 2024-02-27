@@ -12,14 +12,6 @@ const Header = () => {
             element.scrollIntoView({ behavior: 'smooth' });
         }
     };
-    const openSponsorForm = () => {
-        setOpenForm(true);
-    };
-
-    const handleClose = () => {
-        setOpenForm(false);
-    };
-
 
     return (
         <Box
@@ -59,22 +51,11 @@ const Header = () => {
                 <Box sx={{ display: 'flex' }}>
                     <Button sx={{ margin: '0 1rem', color: 'white', fontFamily: '"Exo 2", sans-serif', fontSize: '1.2rem' }} onClick={() => scrollToSection('about-us')}>About Us</Button>
                     <Button sx={{ margin: '0 1rem', color: 'white', fontFamily: '"Exo 2", sans-serif', fontSize: '1.2rem' }} onClick={() => scrollToSection('projects')}>Projects</Button>
-                    <Button sx={{ margin: '0 1rem', color: 'white', fontFamily: '"Exo 2", sans-serif', fontSize: '1.2rem' }} onClick={openSponsorForm}>Sponsor Us</Button> 
+                    <Button sx={{ margin: '0 1rem', color: 'white', fontFamily: '"Exo 2", sans-serif', fontSize: '1.2rem' }} onClick={() => scrollToSection('sponsors')}>Sponsor Us</Button>
                 </Box>
-      )}
-
-      <Dialog open={openForm} onClose={handleClose}>
-        <DialogTitle>Fill out the form to sponsor us</DialogTitle>
-        <DialogContent>
-          {<SpnsorForm.js/>}
-        </DialogContent>
-        <DialogActions>
-          <Button onClick={handleClose}>Cancel</Button>
-          <Button onClick={handleClose}>Submit</Button>
-        </DialogActions>
-      </Dialog>
-    </Box>
-  );
+            )}
+        </Box>
+    );
 };
 
 export default Header;
