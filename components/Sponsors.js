@@ -11,7 +11,7 @@ const Sponsors = () => {
   const sponsorURLs = [
     'https://recaust.com/',
     'https://www.firstinspires.org/',
-    'https://www.motorola.ca/',
+    'https://www.motorolasolutions.com/en_us/about/motorola-solutions-foundation.html',
     'https://outerlimitsclothing.ca/',
   ];
 
