@@ -23,7 +23,7 @@ const Projects = () => {
     {
       title: 'FRC 2024 Practice Bot',
       description: 'A practice robot built to hone our skills and prepare for the FRC 2024 competition.',
-      image: '/images/frc_2024_practice_robot.jpg',
+      image: '/images/newrobotimg.jpg',
       projectId: 'frc-2024-practice-robot',
       link: 'https://www.firstinspires.org/robotics/frc'
     },
