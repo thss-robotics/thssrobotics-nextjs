@@ -16,7 +16,7 @@ const Home = () => {
           right: 0,
           height: '800px',
          // backgroundImage: 'url(https://i.postimg.cc/g0GHz2jZ/cover.jpg)',
-          backgroundImage: 'url(https://i.postimg.cc/BbQ29M9j/20240302-163146.jpg)',
+          backgroundImage: 'url(https://i.postimg.cc/j5nc2RMz/20240302-163146.jpg)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           zIndex: 1000,
