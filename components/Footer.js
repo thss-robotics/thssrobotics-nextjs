@@ -86,7 +86,7 @@ const Footer = () => {
             <Link href="https://www.youtube.com/@thundertechrobotics" target="_blank" rel="noopener noreferrer">
               <YouTubeIcon sx={{ color: 'white', marginRight: '0.5rem', fontSize: '3rem' }} />
             </Link>
-            <Link href="https://www.instagram.com/thssrobotics/" target="_blank" rel="noopener noreferrer">
+            <Link href="https://www.instagram.com/thundertech.robotics/" target="_blank" rel="noopener noreferrer">
               <InstagramIcon sx={{ color: 'white', fontSize: '3rem' }} />
             </Link>
           </Box>
