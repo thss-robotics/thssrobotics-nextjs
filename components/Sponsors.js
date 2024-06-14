@@ -57,7 +57,7 @@ const Sponsors = () => {
                
               }}
             >
-              In our endeavor, your support is invaluable. We are incredibly grateful for any form of contribution – whether it be monetary donations, tools, materials, or even expert advice. Join us in our mission to build, learn, and grow as we strive to leave a mark in the realm of robotics. If you want to sponsor us, please email us; we will be happy to work something out.
+              In our endeavor, your support is invaluable. We are incredibly grateful for any form of contribution – whether it be monetary donations, tools, materials, or even expert advice. Join us in our mission to build, learn, and grow as we strive to leave a mark in the world of STEM. If you want to sponsor us, please email us; we will be happy to work something out with you.
             </Typography>
           </Grid>
           <Grid item>
