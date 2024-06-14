@@ -27,7 +27,13 @@ const Projects = () => {
       projectId: 'frc-2024-practice-robot',
       link: 'https://www.firstinspires.org/robotics/frc'
     },
-    
+    {
+      title: 'Who We Are',
+      description: 'A brief video talking about who we are and why we need your help.',
+      image: '/images/newrobotimg.jpg',
+      projectId: 'ttr-2024-promo',
+      link: 'https://www.youtube.com/watch?v=NNtOW1ePp_I'
+    },         
   ];
 {/*
       title: 'BuzzBot',
