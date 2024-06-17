@@ -54,9 +54,9 @@ const Header1 = () => {
       </IconButton>
     ) : (
       <Box sx={{ display: 'flex' }}>
-      <Button sx={{ margin: '0 1rem', color: 'white', fontFamily: '"Exo 2", sans-serif', fontSize: '1.2rem' }} onClick={() => scrollToSection('about-us')}>About Us</Button>
-      <Button sx={{ margin: '0 1rem', color: 'white', fontFamily: '"Exo 2", sans-serif', fontSize: '1.2rem' }} onClick={() => scrollToSection('projects')}>Projects</Button>
-      <Button sx={{ margin: '0 1rem', color: 'white', fontFamily: '"Exo 2", sans-serif', fontSize: '1.2rem' }}><Link href="/sponsor-us" passHref><a style={{ textDecoration: 'none', color: 'inherit' }}>Sponsor Us</a>
+      <Button sx={{ margin: '0 1rem', color: 'white', fontFamily: '"Exo 2", sans-serif', fontSize: '1.2rem', fontWeight: 'bold'}} onClick={() => scrollToSection('about-us')}>About Us</Button>
+      <Button sx={{ margin: '0 1rem', color: 'white', fontFamily: '"Exo 2", sans-serif', fontSize: '1.2rem', fontWeight: 'bold'}} onClick={() => scrollToSection('projects')}>Projects</Button>
+      <Button sx={{ margin: '0 1rem', color: 'white', fontFamily: '"Exo 2", sans-serif', fontSize: '1.2rem', fontWeight: 'bold'}}><Link href="/sponsor-us" passHref><a style={{ textDecoration: 'none', color: 'inherit' }}>Sponsor Us</a>
   </Link>
 </Button>
 </Box>
@@ -84,7 +84,7 @@ const Header2 = () => {
         display: 'flex',
         justifyContent: isMobile ? 'center' : 'space-between',
         alignItems: 'center',
-        padding: '1rem',
+        padding: '1.7rem',
         backgroundColor: 'rgb(136, 0, 255)',
       }}
     >
@@ -92,7 +92,7 @@ const Header2 = () => {
     <a style={{ display: 'flex', alignItems: 'center' }}>
     <img
       src={'/logoblack.png'}
-      alt="ThunderTech Robotics Logo"
+      alt="ThunderTech Robotics Logo"      
       style={{
         height: '100px',
         filter: 'invert(100%)',
