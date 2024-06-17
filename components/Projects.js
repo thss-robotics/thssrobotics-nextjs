@@ -25,7 +25,7 @@ const Projects = () => {
       description: 'A practice robot built to hone our skills and prepare for the FRC 2024 competition.',
       image: '/images/newrobotimg.jpg',
       projectId: 'frc-2024-practice-robot',
-      link: 'https://www.firstinspires.org/robotics/frc'
+      link: 'https://www.youtube.com/watch?v=8kwPYAN-gxQ'
     },
           
   ];
