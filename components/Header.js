@@ -3,10 +3,16 @@ import { Box, useMediaQuery, useTheme, IconButton, Button } from '@mui/material'
 import MenuIcon from '@mui/icons-material/Menu';
 import Link from 'next/link';
 
-
 const Header = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+
+  const scrollToSection = (sectionId) => {
+      const element = document.getElementById(sectionId);
+      if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+      }
+  };
 
   return (
     <>
@@ -41,9 +47,9 @@ const Header = () => {
           </IconButton>
         ) : (
           <Box sx={{ display: 'flex' }}>
-            <Button sx={{ margin: '0 1rem', color: 'black', fontFamily: '"Exo 2", sans-serif', fontSize: '1.2rem' }} onClick={() => scrollToSection('about-us')}>About Us</Button>
-            <Button sx={{ margin: '0 1rem', color: 'black', fontFamily: '"Exo 2", sans-serif', fontSize: '1.2rem' }} onClick={() => scrollToSection('projects')}>Projects</Button>
-            <Button sx={{ margin: '0 1rem', color: 'black', fontFamily: '"Exo 2", sans-serif', fontSize: '1.2rem' }} onClick={() => scrollToSection('sponsors')}>Sponsor Us</Button>
+            <Button sx={{ margin: '0 1rem', color: 'black', fontFamily: '"Exo 2", sans-serif', fontSize: '1.2rem', fontWeight: 'bold', '&:hover': {backgroundColor: '#7700ee',},}} onClick={() => scrollToSection('about-us')}>About Us</Button>
+            <Button sx={{ margin: '0 1rem', color: 'black', fontFamily: '"Exo 2", sans-serif', fontSize: '1.2rem', fontWeight: 'bold', '&:hover': {backgroundColor: '#7700ee',},}} onClick={() => scrollToSection('projects')}>Projects</Button>
+            <Button sx={{ margin: '0 1rem', color: 'black', fontFamily: '"Exo 2", sans-serif', fontSize: '1.2rem', fontWeight: 'bold', '&:hover': {backgroundColor: '#7700ee',},}} onClick={() => scrollToSection('sponsors')}>Sponsor Us</Button>
           </Box>
         )}
       </Box>
