@@ -2,6 +2,8 @@ import React from 'react';
 import { Box, useMediaQuery, useTheme, IconButton, Button } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import { useRouter } from 'next/router';
+import Link from 'next/link';
+
 
 
 const Header1 = () => {
@@ -62,6 +64,8 @@ const Header1 = () => {
 };
 
 const Header2 = () => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
      
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
