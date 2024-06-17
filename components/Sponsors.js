@@ -1,5 +1,5 @@
 import React from 'react';
-import { Typography, Box, Container, Grid, Link } from '@mui/material';
+import { Typography, Box, Container, Grid, Link, Button } from '@mui/material';
 
 const Sponsors = () => {
   const sponsorLogos = [
@@ -35,6 +35,7 @@ const Sponsors = () => {
           spacing={3}
           sx={{ minHeight: '100%', textAlign: 'center' }}
         >
+          {/* Our Sponsors Title */}
           <Grid item>
             <Typography
               variant="h3"
@@ -47,24 +48,46 @@ const Sponsors = () => {
               Our Sponsors
             </Typography>
           </Grid>
+
+          {/* Sponsorship Description */}
           <Grid item>
             <Typography
               variant="h5"
               sx={{
-                marginBottom: '3rem',
+                marginBottom: '0.2rem',
                 fontFamily: '"Exo 2", sans-serif', 
                 maxWidth: '80vw',
-               
               }}
             >
-              In our endeavor, your support is invaluable. We are incredibly grateful for any form of contribution – whether it be monetary donations, tools, materials, or even expert advice. Join us in our mission to build, learn, and grow as we strive to leave a mark in the world of STEM. If you want to sponsor us, please email us; we will be happy to work something out with you.
+              In our endeavor, your support is invaluable. We are incredibly grateful for any form of contribution – whether it be monetary donations, tools, materials, or even expert advice. Join us in our mission to build, learn, and grow as we strive to leave a mark in the realm of robotics. If you want to sponsor us, please email us; we will be happy to work something out.
             </Typography>
           </Grid>
+
+          {/* Join The List Button */}
+          <Grid item>
+          <Button 
+           variant="contained" 
+           href="/sponsor-us" 
+           target="_blank"
+           sx={{
+             marginBottom: '6rem',
+             fontFamily: '"Exo 2", sans-serif',
+             backgroundColor: '#8800ff', // This sets the button color
+             '&:hover': {
+               backgroundColor: '#7700ee', // Optional: change color slightly on hover
+             },
+             padding: '0.5rem 2rem',
+           }}
+          >
+             Join Them Now!
+          </Button>
+          </Grid>
+          {/* Heartfelt Thanks Text */}
           <Grid item>
             <Typography
               variant="h5"
               sx={{
-                marginBottom: '1rem',
+                marginBottom: '0.5rem',
                 fontFamily: '"Exo 2", sans-serif', 
                 fontWeight: 'bold',
               }}
@@ -72,6 +95,7 @@ const Sponsors = () => {
               Heartfelt Thanks to All Our Supporters:
             </Typography>
           </Grid>
+          
           {/* Sponsor Logos */}
           <Grid item>
             <Grid
@@ -80,8 +104,7 @@ const Sponsors = () => {
               justifyContent="center"
               alignItems="center"
               spacing={6}
-             
-            >
+              >
               {sponsorLogos.map((logo, index) => (
                 <Grid item key={logo}>
                   <Link href={sponsorURLs[index]} target="_blank">
