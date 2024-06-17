@@ -95,6 +95,7 @@ const Header2 = () => {
       alt="ThunderTech Robotics Logo"
       style={{
         height: '100px',
+        filter: 'invert(100%)',
         cursor: 'pointer',
       }}
     />
@@ -109,9 +110,9 @@ const Header2 = () => {
       </IconButton>
     ) : (
       <Box sx={{ display: 'flex' }}>
-      <Button sx={{ margin: '0 1rem', color: 'black', fontFamily: '"Exo 2", sans-serif', fontSize: '1.2rem', fontWeight: 'bold', '&:hover': {backgroundColor: '#7700ee',},}} onClick={() => scrollToSection('about-us')}>About Us</Button>
-      <Button sx={{ margin: '0 1rem', color: 'black', fontFamily: '"Exo 2", sans-serif', fontSize: '1.2rem', fontWeight: 'bold', '&:hover': {backgroundColor: '#7700ee',},}} onClick={() => scrollToSection('projects')}>Projects</Button>
-      <Button sx={{ margin: '0 1rem', color: 'black', fontFamily: '"Exo 2", sans-serif', fontSize: '1.2rem', fontWeight: 'bold', '&:hover': {backgroundColor: '#7700ee',},}}><Link href="/sponsor-us" passHref><a style={{ textDecoration: 'none', color: 'inherit' }}>Sponsor Us</a>
+      <Button sx={{ margin: '0 1rem', color: 'white', fontFamily: '"Exo 2", sans-serif', fontSize: '1.2rem', fontWeight: 'bold', '&:hover': {backgroundColor: '#7700ee',},}} onClick={() => scrollToSection('about-us')}>About Us</Button>
+      <Button sx={{ margin: '0 1rem', color: 'white', fontFamily: '"Exo 2", sans-serif', fontSize: '1.2rem', fontWeight: 'bold', '&:hover': {backgroundColor: '#7700ee',},}} onClick={() => scrollToSection('projects')}>Projects</Button>
+      <Button sx={{ margin: '0 1rem', color: 'white', fontFamily: '"Exo 2", sans-serif', fontSize: '1.2rem', fontWeight: 'bold', '&:hover': {backgroundColor: '#7700ee',},}}><Link href="/sponsor-us" passHref><a style={{ textDecoration: 'none', color: 'inherit' }}>Sponsor Us</a>
       </Link>
       </Button>
     </Box>
