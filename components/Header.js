@@ -5,9 +5,6 @@ import { useRouter } from 'next/router';
 import Link from 'next/link';
 
 
-import { useRouter } from 'next/router';
-import Link from 'next/link';
-
 
 
 const Header1 = () => {
@@ -19,17 +16,18 @@ const Header1 = () => {
      if (element) {
         element.scrollIntoView({ behavior: 'smooth' });
       }
-const Header1 = () => {
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+    const Header1 = () => {
+      const theme = useTheme();
+      const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
     
-  const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId);
-     if (element) {
+      const scrollToSection = (sectionId) => {
+      const element = document.getElementById(sectionId);
+      if (element) {
         element.scrollIntoView({ behavior: 'smooth' });
       }
     };
-    
+  } 
+}
   return (
     <Box
       sx={{
