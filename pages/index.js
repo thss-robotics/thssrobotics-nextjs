@@ -5,9 +5,12 @@ import AboutUs from '../components/AboutUs';
 import Sponsors from '../components/Sponsors';
 import Projects from '../components/Projects';
 import OurMission from '../components/OurMission';
+import Header from '../components/Header';
 
 const Home = () => {
   return (
+    <>
+    <Header />
     <div>
       <Box
         sx={{
@@ -79,7 +82,7 @@ const Home = () => {
       <Sponsors />
 
     </div>
-  );
+ </> );
 };
 
 export default Home;
