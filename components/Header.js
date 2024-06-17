@@ -56,8 +56,10 @@ const Header1 = () => {
       <Box sx={{ display: 'flex' }}>
       <Button sx={{ margin: '0 1rem', color: 'white', fontFamily: '"Exo 2", sans-serif', fontSize: '1.2rem' }} onClick={() => scrollToSection('about-us')}>About Us</Button>
       <Button sx={{ margin: '0 1rem', color: 'white', fontFamily: '"Exo 2", sans-serif', fontSize: '1.2rem' }} onClick={() => scrollToSection('projects')}>Projects</Button>
-      <Button sx={{ margin: '0 1rem', color: 'white', fontFamily: '"Exo 2", sans-serif', fontSize: '1.2rem' }} onClick={() => scrollToSection('sponsors')}>Sponsor Us</Button>
-      </Box>
+      <Button sx={{ margin: '0 1rem', color: 'white', fontFamily: '"Exo 2", sans-serif', fontSize: '1.2rem' }}><Link href="/sponsor-us" passHref><a style={{ textDecoration: 'none', color: 'inherit' }}>Sponsor Us</a>
+  </Link>
+</Button>
+</Box>
     )}
     </Box>
   );
@@ -109,7 +111,9 @@ const Header2 = () => {
       <Box sx={{ display: 'flex' }}>
       <Button sx={{ margin: '0 1rem', color: 'black', fontFamily: '"Exo 2", sans-serif', fontSize: '1.2rem', fontWeight: 'bold', '&:hover': {backgroundColor: '#7700ee',},}} onClick={() => scrollToSection('about-us')}>About Us</Button>
       <Button sx={{ margin: '0 1rem', color: 'black', fontFamily: '"Exo 2", sans-serif', fontSize: '1.2rem', fontWeight: 'bold', '&:hover': {backgroundColor: '#7700ee',},}} onClick={() => scrollToSection('projects')}>Projects</Button>
-      <Button sx={{ margin: '0 1rem', color: 'black', fontFamily: '"Exo 2", sans-serif', fontSize: '1.2rem', fontWeight: 'bold', '&:hover': {backgroundColor: '#7700ee',},}} onClick={() => scrollToSection('sponsors')}>Sponsor Us</Button>
+      <Button sx={{ margin: '0 1rem', color: 'black', fontFamily: '"Exo 2", sans-serif', fontSize: '1.2rem', fontWeight: 'bold', '&:hover': {backgroundColor: '#7700ee',},}}><Link href="/sponsor-us" passHref><a style={{ textDecoration: 'none', color: 'inherit' }}>Sponsor Us</a>
+      </Link>
+      </Button>
     </Box>
   )}
   </Box>
