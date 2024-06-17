@@ -7,7 +7,8 @@
     "cypress:run": "cypress run",
     "dev": "next dev",
     "build": "next build",
-    "export": "next export"
+    "export": "next export",
+    "start": "next dev"
   },
   "dependencies": {
     "@emotion/react": "^11.11.3",
@@ -20,9 +21,14 @@
     "react-dom": "^18.2.0",
     "react-gallery": "^0.1.0",
     "react-grid-gallery": "^1.0.0",
+    "react-scripts": "^5.0.1",
     "react-slick": "^0.29.0",
     "react-transition-group": "^4.4.5",
     "slick-carousel": "^1.8.1",
     "styled-components": "^5.3.9"
+  },
+  "devDependencies": {
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.0.4"
   }
 }

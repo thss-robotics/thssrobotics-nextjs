@@ -36,12 +36,12 @@ const Projects = () => {
       projectId: 'ttr-2024-promo',
       link: 'https://www.youtube.com/watch?v=NNtOW1ePp_I'
     },   */
-{/*
+  /*{
       title: 'BuzzBot',
       description: "We're not quite sure what this is.",
       image: '/images/buzzbot.jpg',
       projectId: 'buzzbot'
-  */}
+     },   */
   const handleProjectClick = (project) => {
     if (project.link) {
       window.open(project.link, '_blank');

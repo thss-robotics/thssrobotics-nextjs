@@ -4,6 +4,7 @@ import { Typography, Box, Button, Container, Grid } from '@mui/material';
 import AboutUs from '../components/AboutUs';
 import Sponsors from '../components/Sponsors';
 import Projects from '../components/Projects';
+import OurMission from '../components/OurMission';
 
 const Home = () => {
   return (
@@ -70,6 +71,8 @@ const Home = () => {
       </Box>
 
       <AboutUs />
+
+      <OurMission />
 
       <Projects />
 

@@ -64,7 +64,7 @@ const AboutUs = () => {
       <Box
         id="about-us"
         sx={{
-          backgroundColor: '#f5f5f5',
+          backgroundColor: '#ffffff',
           minHeight: '400px',
           display: 'flex',
           justifyContent: 'center',
