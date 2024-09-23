@@ -43,9 +43,8 @@ function LogansPlan() {
         <div
           key={day}
           className={`${styles.calendarDay} ${isToday ? styles.calendarDayToday : ''}`}
-          onClick={() => handleDayClick(day)}
         >
-          <div className={styles.dayNumber}>{day}</div>
+          <div className={styles.dayNumber} onClick={() => handleDayClick(day)}>{day}</div>
           <textarea
             className={styles.noteInput}
             value={notes[day] || ''}
