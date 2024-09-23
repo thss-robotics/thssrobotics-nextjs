@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from '../styles/LogansPlan.module.css';
 
 function LogansPlan() {
@@ -9,6 +9,21 @@ function LogansPlan() {
   const [dayPlans, setDayPlans] = useState({});
 
   const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+  useEffect(() => {
+    const savedNotes = JSON.parse(localStorage.getItem('notes')) || {};
+    const savedDayPlans = JSON.parse(localStorage.getItem('dayPlans')) || {};
+    setNotes(savedNotes);
+    setDayPlans(savedDayPlans);
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('notes', JSON.stringify(notes));
+  }, [notes]);
+
+  useEffect(() => {
+    localStorage.setItem('dayPlans', JSON.stringify(dayPlans));
+  }, [dayPlans]);
 
   const renderCalendar = () => {
     const daysOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
