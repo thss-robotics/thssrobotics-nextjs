@@ -79,7 +79,7 @@ const Sponsors = () => {
              padding: '0.5rem 2rem',
            }}
           >
-             Join Them Now!
+             Sponsor Us!
           </Button>
           </Grid>
           {/* Heartfelt Thanks Text */}
