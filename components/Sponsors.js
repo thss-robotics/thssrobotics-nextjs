@@ -3,16 +3,21 @@ import { Typography, Box, Container, Grid, Link, Button } from '@mui/material';
 
 const Sponsors = () => {
   const sponsorLogos = [
-    'McFarlen Engineering.png',
-    'firstlogo.png',
-    'motorola.png',
-    'OuterLimitsLOGO.png',
+    'McFarlen Engineering.png', // 2024
+    'firstlogo.png', // 2024
+    'motorola.png', // 2024
+    'OuterLimitsLOGO.png', // 2024
+    'TDSLogo.png', // 2025
+    'Pitt-Meadows-Plumbing-Logo.png' // 2025
   ];
   const sponsorURLs = [
     'https://recaust.com/',
     'https://www.firstinspires.org/',
     'https://www.motorolasolutions.com/en_us/about/motorola-solutions-foundation.html',
     'https://outerlimitsclothing.ca/',
+    'https://tdsys.ca/',
+    'https://pittmeadows.net/',
+
   ];
 
   return (
@@ -70,7 +75,7 @@ const Sponsors = () => {
            href="/sponsor-us" 
            target="_blank"
            sx={{
-             marginBottom: '6rem',
+             marginBottom: '4rem',
              fontFamily: '"Exo 2", sans-serif',
              backgroundColor: '#8800ff', // This sets the button color
              '&:hover': {
@@ -82,7 +87,8 @@ const Sponsors = () => {
              Sponsor Us!
           </Button>
           </Grid>
-          {/* Heartfelt Thanks Text */}
+          
+          {/* Heartfelt Individual Thanks Text */}
           <Grid item>
             <Typography
               variant="h5"
@@ -92,7 +98,35 @@ const Sponsors = () => {
                 fontWeight: 'bold',
               }}
             >
-              Heartfelt Thanks to All Our Supporters:
+              Heartfelt Thanks to All Our Individual Supporters:
+            </Typography>
+          </Grid>
+
+          {/* Individual sponsors */}
+          <Grid item>
+            <Typography
+              variant="h5"
+              sx={{
+                marginBottom: '6rem',
+                fontFamily: '"Exo 2", sans-serif', 
+                maxWidth: '80vw',
+              }}
+            >
+              There are many individual sponsors who wish to remain anonymous at this time.
+            </Typography>
+          </Grid>
+          
+          {/* Heartfelt Corporate Thanks Text */}
+          <Grid item>
+            <Typography
+              variant="h5"
+              sx={{
+                marginBottom: '0.5rem',
+                fontFamily: '"Exo 2", sans-serif', 
+                fontWeight: 'bold',
+              }}
+            >
+              Thanks to All Our Corporate Supporters:
             </Typography>
           </Grid>
           
