@@ -8,6 +8,12 @@ import Footer from '../components/Footer';
 
 function MyApp({ Component, pageProps }) {
   return (
+    {/* 
+    Why are you looking here? (we know your a nerd now...)
+    |
+    |
+    or pretending to hack, if so, SHAME ON YOU!
+*/}
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <GlobalStyle />
