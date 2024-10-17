@@ -14,7 +14,10 @@ const Home = () => {
      
 
       <div>
-        {/* 🐣 Shhh... Don't tell anyone! You've found 1/5 Easter eggs! 🐣 */}
+        {/* 
+        only nerds would be looking here, you nerd. here is a neerdy easter egg hunt, enjoy the code! 
+        🐣 Shhh... Don't tell anyone! You've found 1/5 Easter eggs! 🐣 
+        */}
         <Box
           sx={{
            position: 'relative', // Changed for positioning the text
