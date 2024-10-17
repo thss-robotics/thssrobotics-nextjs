@@ -14,6 +14,7 @@ const Home = () => {
      
 
       <div>
+        {/* 🐣 Shhh... Don't tell anyone! You've found 1/5 Easter eggs! 🐣 */}
         <Box
           sx={{
            position: 'relative', // Changed for positioning the text
