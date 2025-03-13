@@ -27,6 +27,13 @@ const Projects = () => {
       projectId: 'frc-2024-practice-robot',
       link: 'https://www.youtube.com/watch?v=8kwPYAN-gxQ'
     },
+    {
+      title: 'FRC Swerve Drivetrain',
+      description: 'Swerve drive is a sophisticated drivetrain system where each wheel can independently rotate and drive, enabling omnidirectional movement and unmatched agility.',
+      image: '/images/swervedrive.jpg',
+      projectId: 'FRC-Swerve-Drivetrain',
+      link: 'https://thundertechrobotics.ca/SwerveDrive'
+    }
           
   ];
   /*{
