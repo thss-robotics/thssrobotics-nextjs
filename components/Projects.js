@@ -32,7 +32,7 @@ const Projects = () => {
       description: 'Swerve drive is a sophisticated drivetrain system where each wheel can independently rotate and drive, enabling omnidirectional movement and unmatched agility.',
       image: '/images/swervedrive.jpg',
       projectId: 'FRC-Swerve-Drivetrain',
-      link: 'https://thundertechrobotics.ca/SwerveDrive'
+      link: '/SwerveDrive'
     }
           
   ];
