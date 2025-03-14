@@ -1,9 +1,10 @@
-import React from 'react';
-import { Box, useMediaQuery, useTheme, IconButton, Button } from '@mui/material';
+import React, { useState } from 'react';
+import { Box, useMediaQuery, useTheme, IconButton, Button, Drawer, List, ListItem, ListItemText } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 
+// Function to handle scrolling and navigation
 const scrollToSection = (sectionId, router) => {
   const element = document.getElementById(sectionId);
 
@@ -19,10 +20,21 @@ const scrollToSection = (sectionId, router) => {
   }
 };
 
+// Header1 Component
 const Header1 = ({ scrollToSection }) => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
   const router = useRouter();
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+
+  const toggleDrawer = (open) => () => {
+    setIsDrawerOpen(open);
+  };
+
+  const handleNavigation = (sectionId) => {
+    toggleDrawer(false)();
+    scrollToSection(sectionId, router);
+  };
 
   return (
     <Box
@@ -52,12 +64,32 @@ const Header1 = ({ scrollToSection }) => {
         }}
       />
       {isMobile ? (
-        <IconButton
-          sx={{ color: 'white', position: 'absolute', right: '10px' }}
-          aria-label="menu"
-        >
-          <MenuIcon />
-        </IconButton>
+        <>
+          <IconButton
+            sx={{ color: 'white', position: 'absolute', right: '10px' }}
+            aria-label="menu"
+            onClick={toggleDrawer(true)}
+          >
+            <MenuIcon />
+          </IconButton>
+          <Drawer anchor="right" open={isDrawerOpen} onClose={toggleDrawer(false)}>
+            <List>
+              <ListItem button onClick={() => handleNavigation('about-us')}>
+                <ListItemText primary="About Us" />
+              </ListItem>
+              <ListItem button onClick={() => handleNavigation('projects')}>
+                <ListItemText primary="Projects" />
+              </ListItem>
+              <ListItem button>
+                <Link href="/sponsor-us" passHref>
+                  <a style={{ textDecoration: 'none', color: 'inherit' }}>
+                    <ListItemText primary="Sponsor Us" />
+                  </a>
+                </Link>
+              </ListItem>
+            </List>
+          </Drawer>
+        </>
       ) : (
         <Box sx={{ display: 'flex' }}>
           <Button
@@ -105,10 +137,21 @@ const Header1 = ({ scrollToSection }) => {
   );
 };
 
+// Header2 Component
 const Header2 = ({ scrollToSection }) => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
   const router = useRouter();
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+
+  const toggleDrawer = (open) => () => {
+    setIsDrawerOpen(open);
+  };
+
+  const handleNavigation = (sectionId) => {
+    toggleDrawer(false)();
+    scrollToSection(sectionId, router);
+  };
 
   return (
     <Box
@@ -135,12 +178,32 @@ const Header2 = ({ scrollToSection }) => {
         </a>
       </Link>
       {isMobile ? (
-        <IconButton
-          sx={{ color: 'black', position: 'absolute', right: '10px' }}
-          aria-label="menu"
-        >
-          <MenuIcon />
-        </IconButton>
+        <>
+          <IconButton
+            sx={{ color: 'white', position: 'absolute', right: '10px' }}
+            aria-label="menu"
+            onClick={toggleDrawer(true)}
+          >
+            <MenuIcon />
+          </IconButton>
+          <Drawer anchor="right" open={isDrawerOpen} onClose={toggleDrawer(false)}>
+            <List>
+              <ListItem button onClick={() => handleNavigation('about-us')}>
+                <ListItemText primary="About Us" />
+              </ListItem>
+              <ListItem button onClick={() => handleNavigation('projects')}>
+                <ListItemText primary="Projects" />
+              </ListItem>
+              <ListItem button>
+                <Link href="/sponsor-us" passHref>
+                  <a style={{ textDecoration: 'none', color: 'inherit' }}>
+                    <ListItemText primary="Sponsor Us" />
+                  </a>
+                </Link>
+              </ListItem>
+            </List>
+          </Drawer>
+        </>
       ) : (
         <Box sx={{ display: 'flex' }}>
           <Button
@@ -191,7 +254,7 @@ const Header2 = ({ scrollToSection }) => {
   );
 };
 
-
+// Parent Header Component
 const Header = () => {
   const router = useRouter();
   const isMainPage = router.pathname === '/';
