@@ -69,7 +69,7 @@ const SwerveDriveInfo = () => {
                 }}
             >
                 <Container maxWidth="lg">
-                    <Grid container spacing={10}>
+                    <Grid container spacing={10} alignItems="center">
                         <Grid item xs={12} md={6}>
                             <Slider {...settings}>
                                 {galleryImages.map((img, index) => (
