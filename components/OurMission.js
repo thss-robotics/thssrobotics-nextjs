@@ -108,7 +108,7 @@ const AboutUs = () => {
                 }}
               >
                 As a newly formed robotics team at Thomas Haney Secondary School, we embarked on our journey in 2023 with an ambition to win the First Robotics Competition in 2024.
-                Our mission is to hone our teamwork and technical skills through projects that benefit our community. Now,we seek financial support to make it to FRC in 2025. 
+                Our mission is to hone our teamwork and technical skills through projects that benefit our community. Now, we seek financial support to make it to FRC in 2025. 
               </Typography>
             </Grid>
           </Grid>
