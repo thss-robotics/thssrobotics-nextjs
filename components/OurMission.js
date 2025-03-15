@@ -72,7 +72,7 @@ const AboutUs = () => {
         }}
       >
         <Container maxWidth="lg"> 
-          <Grid container spacing={10}>
+          <Grid container spacing={10} alignItems="center">
             <Grid item xs={12} md={6}>
               <Slider {...settings}> 
                 {galleryImages.map((img, index) => (
@@ -104,11 +104,19 @@ const AboutUs = () => {
               <Typography
                 variant="h5"
                 sx={{
+                  marginBottom: '1rem',
                   fontFamily: '"Exo 2", sans-serif',
                 }}
               >
-                As a newly formed robotics team at Thomas Haney Secondary School, we embarked on our journey in 2023 with an ambition to win the First Robotics Competition in 2024.
-                Our mission is to hone our teamwork and technical skills through projects that benefit our community. Now,we seek financial support to make it to FRC in 2025. 
+                As a newly formed robotics team at Thomas Haney Secondary School, we embarked on our journey in 2023 with an ambition to compete at the First Robotics Competition in 2024.
+              </Typography>
+              <Typography
+                variant="h5"
+                sx={{
+                  fontFamily: '"Exo 2", sans-serif',
+                }}
+              >
+                Our mission is to hone our teamwork and technical skills through projects that benefit our community. Now, we seek financial support to make it to FRC in 2026. As a team we believe that locally we have the opportunity to create a STEAM based community in Maple Ridge, and put the local high schools at the forefront of innovation.
               </Typography>
             </Grid>
           </Grid>

@@ -37,7 +37,7 @@ const OurMission = () => {
                 fontFamily: '"Exo 2", sans-serif',
               }}
             >
-              In short, we are Thunder Tech Robotics. Our goal is to inspire innovation in the future of STEM. We need YOUR help to make this dream possible.
+              In short, we are Thunder Tech Robotics. Our goal is to inspire innovation in the future of STEAM. We need YOUR help to make this dream possible.
             </Typography>
           </Grid>
           <Grid item xs={12} md={6}>
