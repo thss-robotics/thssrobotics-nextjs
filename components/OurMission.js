@@ -116,7 +116,7 @@ const AboutUs = () => {
                   fontFamily: '"Exo 2", sans-serif',
                 }}
               >
-                Our mission is to hone our teamwork and technical skills through projects that benefit our community. Now, we seek financial support to make it to FRC in 2026. As a team we belive that localy we have the oppertunity to create a STEAM based community in Maple Ridge, and put the local highschools at the forefront of innovation. 
+                Our mission is to hone our teamwork and technical skills through projects that benefit our community. Now, we seek financial support to make it to FRC in 2026. As a team we believe that locally we have the opportunity to create a STEAM based community in Maple Ridge, and put the local high schools at the forefront of innovation.
               </Typography>
             </Grid>
           </Grid>
