@@ -3,21 +3,22 @@ import { Typography, Box, Container, Grid, Link, Button } from '@mui/material';
 
 const Sponsors = () => {
   const sponsorLogos = [
-    'McFarlen Engineering.png', // 2024
-    'firstlogo.png', // 2024
-    'motorola.png', // 2024
-    'OuterLimitsLOGO.png', // 2024
-    'TDSLogo.png', // 2025
-    'Pitt-Meadows-Plumbing-Logo.png' // 2025
+    'McFarlen Engineering.png', // 2024-26
+    'firstlogo.png', // 2024-26
+    'motorola.png', // 2024-26
+    'TDSLogo.png', // 2025-26
+    'Pitt-Meadows-Plumbing-Logo.png', // 2025-26
+    'Taniumlogo.png', // 2026
+    'TaylorMetalsLogo.png', // 2026
   ];
   const sponsorURLs = [
     'https://recaust.com/',
     'https://www.firstinspires.org/',
     'https://www.motorolasolutions.com/en_us/about/motorola-solutions-foundation.html',
-    'https://outerlimitsclothing.ca/',
     'https://tdsys.ca/',
     'https://pittmeadows.net/',
-
+    'https://www.tanium.com/',
+    'https://www.taylormetals.ca/',
   ];
 
   return (
