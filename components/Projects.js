@@ -33,6 +33,13 @@ const Projects = () => {
       image: '/images/swervedrive.jpg',
       projectId: 'FRC-Swerve-Drivetrain',
       link: '/SwerveDrive'
+    },
+    {
+      title: 'FRC 2025 Robot',
+      description: 'In 2025, software issues affected rotation and acceleration, but after refinement we achieved reliable performance, and our elevator consistently scored coral and removed algae.',
+      image: '/images/swervedrive.jpg',
+      projectId: 'FRC-2025-Robot',
+      link: '/FRC2025Robot'
     }
           
   ];

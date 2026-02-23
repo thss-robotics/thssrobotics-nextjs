@@ -1,6 +1,8 @@
 import React from 'react';
 import { Typography, Box, Container, Grid, Link, Button } from '@mui/material';
 
+const LOGO_PATH = '/images/sponsorLogos/';
+
 const Sponsors = () => {
   const sponsorLogos = [
     'McFarlen Engineering.png', // 2024-26
@@ -10,7 +12,7 @@ const Sponsors = () => {
     'Pitt-Meadows-Plumbing-Logo.png', // 2025-26
     'Taniumlogo.png', // 2026
     'TaylorMetalsLogo.png', // 2026
-  ];
+  ].map(filename => LOGO_PATH + filename);
   const sponsorURLs = [
     'https://recaust.com/',
     'https://www.firstinspires.org/',
@@ -143,7 +145,7 @@ const Sponsors = () => {
               {sponsorLogos.map((logo, index) => (
                 <Grid item key={logo}>
                   <Link href={sponsorURLs[index]} target="_blank">
-                    <img src={logo} alt={`Sponsor ${index + 1}`} style={{ maxWidth: '300px', maxHeight: '300px' }} />
+                    <img src={logo} alt={`Sponsor ${index + 1}`} style={{ maxWidth: '350px', maxHeight: '300px' }} />
                   </Link>
                 </Grid>
               ))}
