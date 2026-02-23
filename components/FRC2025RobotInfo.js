@@ -47,7 +47,7 @@ const FRC2025RobotInfo = () => {
     };
 
     // Assuming you have an array of image names
-    const galleryImages = ['image1.jpg', 'image2.jpg', 'image3.jpg'];
+    const galleryImages = ['image1.jpg', 'image2.jpg'];
 
     return (
         <>
