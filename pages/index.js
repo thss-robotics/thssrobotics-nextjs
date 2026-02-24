@@ -62,7 +62,7 @@ const Home = () => {
                 fontSize: { xs: '9vw', sm: '9vw', md: '7vw', lg: '4.5rem' ,}, 
               }}
             >
-              ThunderTech Robotics
+              Thunder Tech Robotics
             </Typography>
             <Typography 
               variant="h5" 
