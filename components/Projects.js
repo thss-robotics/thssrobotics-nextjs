@@ -37,7 +37,7 @@ const Projects = () => {
     {
       title: 'FRC 2025 Robot',
       description: 'In 2025, software issues affected rotation and acceleration, but after refinement we achieved reliable performance, and our elevator consistently scored coral and removed algae.',
-      image: 'swervedrive.jpg',
+      image: 'robot2025.jpg',
       projectId: 'FRC-2025-Robot',
       link: '/FRC2025Robot'
     }
