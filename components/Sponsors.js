@@ -8,19 +8,19 @@ const Sponsors = () => {
     'McFarlen Engineering.png', // 2024-26
     'firstlogo.png', // 2024-26
     'motorola.png', // 2024-26
-    'TDSLogo.png', // 2025-26
     'Pitt-Meadows-Plumbing-Logo.png', // 2025-26
-    'Taniumlogo.png', // 2026
     'TaylorMetalsLogo.png', // 2026
+    'Taniumlogo.png', // 2026
+    'TDSLogo.png', // 2025-26
   ].map(filename => LOGO_PATH + filename);
   const sponsorURLs = [
     'https://recaust.com/',
     'https://www.firstinspires.org/',
     'https://www.motorolasolutions.com/en_us/about/motorola-solutions-foundation.html',
-    'https://tdsys.ca/',
     'https://pittmeadows.net/',
-    'https://www.tanium.com/',
     'https://www.taylormetals.ca/',
+    'https://www.tanium.com/',
+    'https://tdsys.ca/',
   ];
 
   return (
