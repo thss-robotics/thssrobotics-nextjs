@@ -78,7 +78,7 @@ const AboutUs = () => {
                 {galleryImages.map((img, index) => (
                   <Box key={index} sx={{ maxWidth: '100%', height: '300px', overflow: 'hidden' }}> {/* Set a fixed height */}
                     <img 
-                      src={`/gallery/${img}`} 
+                      src={`/images/mainPageGallery/${img}`} 
                       alt={`Gallery ${index}`} 
                       style={{ 
                         width: '100%', 

@@ -1,23 +1,26 @@
 import React from 'react';
 import { Typography, Box, Container, Grid, Link, Button } from '@mui/material';
 
+const LOGO_PATH = '/images/sponsorLogos/';
+
 const Sponsors = () => {
   const sponsorLogos = [
-    'McFarlen Engineering.png', // 2024
-    'firstlogo.png', // 2024
-    'motorola.png', // 2024
-    'OuterLimitsLOGO.png', // 2024
-    'TDSLogo.png', // 2025
-    'Pitt-Meadows-Plumbing-Logo.png' // 2025
-  ];
+    'McFarlen Engineering.png', // 2024-26
+    'firstlogo.png', // 2024-26
+    'motorola.png', // 2024-26
+    'Pitt-Meadows-Plumbing-Logo.png', // 2025-26
+    'TaylorMetalsLogo.png', // 2026
+    'Taniumlogo.png', // 2026
+    'TDSLogo.png', // 2025-26
+  ].map(filename => LOGO_PATH + filename);
   const sponsorURLs = [
     'https://recaust.com/',
     'https://www.firstinspires.org/',
     'https://www.motorolasolutions.com/en_us/about/motorola-solutions-foundation.html',
-    'https://outerlimitsclothing.ca/',
-    'https://tdsys.ca/',
     'https://pittmeadows.net/',
-
+    'https://www.taylormetals.ca/',
+    'https://www.tanium.com/',
+    'https://tdsys.ca/',
   ];
 
   return (
@@ -142,7 +145,7 @@ const Sponsors = () => {
               {sponsorLogos.map((logo, index) => (
                 <Grid item key={logo}>
                   <Link href={sponsorURLs[index]} target="_blank">
-                    <img src={logo} alt={`Sponsor ${index + 1}`} style={{ maxWidth: '300px', maxHeight: '300px' }} />
+                    <img src={logo} alt={`Sponsor ${index + 1}`} style={{ maxWidth: '350px', maxHeight: '300px' }} />
                   </Link>
                 </Grid>
               ))}
