@@ -21,6 +21,7 @@ const SponsorUs = () => {
       .then((result) => {
         console.log('Email sent!', result.text);
         setSubmitStatus('success');
+        // Reset form fields after successful submission
         setName('');
         setEmail('');
         setMessage('');
