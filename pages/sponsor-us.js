@@ -8,23 +8,28 @@ const SponsorUs = () => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [company, setCompany] = useState('');
+  const [submitStatus, setSubmitStatus] = useState(null); // 'success' | 'error' | null
   const form = useRef(); // Ref for the form
 
   // Event handler for form submission
   const handleSubmit = (event) => {
     event.preventDefault(); // Prevent the default form submit action
+    setSubmitStatus(null);
 
     // Send the email using EmailJS
     emailjs.sendForm('service_nicrg79', 'template_rsehyri', form.current, '65MyIy8ifNN-8trRr')
       .then((result) => {
         console.log('Email sent!', result.text);
+        setSubmitStatus('success');
         // Reset form fields after successful submission
         setName('');
         setEmail('');
         setMessage('');
         setCompany('');
-      }, (error) => {
-        console.log('Failed to send email.', error.text);
+      })
+      .catch((error) => {
+        console.error('Failed to send email.', error.text);
+        setSubmitStatus('error');
       });
   };
 
@@ -34,6 +39,10 @@ const SponsorUs = () => {
       <div className={styles.content}>
         <div className={styles.formWrapper}>
           <h1 className={styles.title}>Sponsorship Inquiry</h1>
+          <p className={styles.emailLink}>
+            Or email us directly at{' '}
+            <a href="mailto:thssrobotics@gmail.com" className={styles.mailtoLink}>thssrobotics@gmail.com</a>
+          </p>
           <form ref={form} className={styles.form} onSubmit={handleSubmit}>
             <label htmlFor="name" className={styles.label}>Name:</label>
             <input 
@@ -81,6 +90,15 @@ const SponsorUs = () => {
             ></textarea>
 
             <button type="submit" className={styles.button}>Send</button>
+            {submitStatus === 'success' && (
+              <p className={styles.statusMessage} style={{ color: 'var(--success, green)' }}>Message sent successfully.</p>
+            )}
+            {submitStatus === 'error' && (
+              <p className={styles.statusMessage} style={{ color: 'var(--error, #c00)' }}>
+                Failed to send. Please try again later or contact us directly at{' '}
+                <a href="mailto:thssrobotics@gmail.com" className={styles.mailtoLink}>thssrobotics@gmail.com</a>.
+              </p>
+            )}
           </form>
         </div>
       </div>

@@ -26,7 +26,22 @@
 
 .title {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
+}
+
+.emailLink {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #555;
+}
+
+.mailtoLink {
+  color: #8800ff;
+  text-decoration: none;
+}
+
+.mailtoLink:hover {
+  text-decoration: underline;
 }
 
 .form {
@@ -58,4 +73,9 @@
 
 .button:hover {
   background-color: #7700ee;
+}
+
+.statusMessage {
+  margin-top: 1rem;
+  font-size: 0.95rem;
 }
